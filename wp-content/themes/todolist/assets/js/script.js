@@ -12,7 +12,7 @@ $('#addBtn').on('click',function(e){
         
         $.ajax({
             type:'POST',
-            url:'/wp-admin/admin-ajax.php',
+            url:'./wp-admin/admin-ajax.php',
             data:{'action':'add_new_todo','new_todo':newTodo},
             success:function(response){
                 location.reload();
@@ -32,7 +32,7 @@ $('.deleteBtn').on('click',function(){
 
     $.ajax({
         type:'POST',
-        url:'/wp-admin/admin-ajax.php',
+        url:'./wp-admin/admin-ajax.php',
         data:{'action':'delete_todo','todo_id':id},
         success:function(response){
              location.reload();      
@@ -51,7 +51,7 @@ $('.checkedTodo').change(function(){
     
     $.ajax({
         type:'POST',
-        url:'/wp-admin/admin-ajax.php',
+        url:'./wp-admin/admin-ajax.php',
         data:{'action':'update_status','todo_id':id,'status':checked},
         success:function(response){
             location.reload();

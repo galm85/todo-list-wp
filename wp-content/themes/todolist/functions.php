@@ -9,6 +9,7 @@
     }
 
     add_action('wp_enqueue_scripts','todo_list_style');
+    
 
 
 
@@ -39,6 +40,7 @@
     }
     
     add_action('wp_ajax_add_new_todo','add_new_todo');
+    add_action('wp_ajax_nopriv_add_new_todo','add_new_todo');
 
 
 
@@ -52,6 +54,7 @@
     }
     
     add_action('wp_ajax_delete_todo','delete_todo');
+    add_action('wp_ajax_nopriv_delete_todo','delete_todo');
 
 
 
@@ -68,3 +71,4 @@
     }
     
     add_action('wp_ajax_update_status','update_status');
+    add_action('wp_ajax_nopriv_update_status','update_status');
